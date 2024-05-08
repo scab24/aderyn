@@ -28,14 +28,6 @@ contract OriginControlledTransfer {
         require(tx.origin == _owner, "Caller is not the owner");
         receiver.transfer(amount);
     }
-    function safeSend2(address payable receiver, uint amount) public {
-        require(tx.origin == _owner, "Caller is not the owner");
-        receiver.transfer(amount);
-    }
-    function safeSend3(address payable receiver, uint amount) public {
-        require(tx.origin == _owner, "Caller is not the owner");
-        receiver.transfer(amount);
-    }
     receive() external payable {}
 }
 
